@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  background-color: #f7f7f7f7;
+  color: #333;
+  width: auto;
+}
+
+:root {
+  --color-red: #ce2037;
+  --color-green: #388e3c;
+  --color-orange: #f42b03;
+  --color-yellow: #f48403;
+  --color-yellow-light: #ffbe0b;
+  --color-lightgreen: #43a047;
+  --color-lightgreen-bright: #66bb6a; /* Add the new color here */
+  --color-darkred: #f71735;
+  --color-darkred-light: #ce2037;
+  --color-darkred-dark: #db3445;
+
+    /* Green Gradient */
+  --gradient-green: linear-gradient(45deg, #66bb6a, #388e3c);
+
+  /* Red Gradient */
+  --gradient-red: linear-gradient(147deg, #e75c6e, #db3445);
+
+  /* Yellow Gradient */
+  --gradient-yellow: linear-gradient(316deg, #f48403, #ffbe0b);
+
+  --color-base-dark: #333;
+  --color-base-light: white, 
+}
+
+.main-cont {
+  background-color: var(--color-base-dark);
+  width: 90vw;
+  height: 90vh;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  margin: 1rem auto;
+  border-radius: 1%;
+}
+
+.interface {
+  background-color: transparent;
+  color: var(--color-base-light)
+}
+
+.map-cont {
+  background-color: bisque;
+  border-radius: 0 1% 1% 0;
+}
+
+.leaflet-popup .leaflet-popup-content-wrapper {
+  background-color: var(--color-base-dark) !important;
+  border-radius: 5px;
+  padding-right: 0.5em;
+}
+
+.leaflet-popup-tip {
+  background-color: var(--color-base-dark) !important;
+  color: var(--color-base-light) !important;
+}
+
+.leaflet-popup-content {
+  background-color: var(--color-base-dark);
+  color: snow;
+}
+
+.running-popup .leaflet-popup-content-wrapper {
+  border-left: 5px solid var(--color-green);
+  border-radius: 10px;
+}
+
+.cycling-popup .leaflet-popup-content-wrapper {
+  border-left: 5px solid var(--color-yellow-light);
+  border-radius: 5px;
+}
+
+.leaflet-popup-close-button > span{
+  background-color: var(--color-base-dark) !important;
+  color: var(--color-base-light);
+  transform: scale(1.2);
+}
