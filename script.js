@@ -72,3 +72,44 @@ workoutType.addEventListener('change', function(e) {
 });
 
 // attempt to refactor the code with OOP
+class App {
+  constructor() {
+    this.getPosition();
+  };
+
+  getPosition() {    
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        this.loadMap, // success callback
+        () => {alert("Could not get your position!") // err callback
+      });
+    }
+  };
+
+  loadMap(position) {
+    const { latitude } = position.coords;
+    const { longitude } = position.coords;
+  
+    map = L.map('map').setView([latitude, longitude], 16);
+  
+    L.tileLayer('https://tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+  
+    L.marker([latitude, longitude]).addTo(map)
+        .bindPopup('A pretty CSS popup.<br> Easily customizable.')
+        .openPopup();
+  
+    map.on('click', function(e) {
+      form.classList.remove("hidden");
+      distance.focus();
+      mapEvent = e;
+    });
+  };
+
+  showForm() {};
+  toggleElevationField() {};
+  newWorkout() {};
+};
+
+const app = new App();
