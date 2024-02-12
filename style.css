@@ -30,7 +30,8 @@
   --gradient-yellow: linear-gradient(316deg, #f48403, #ffbe0b);
 
   --color-base-dark: #333;
-  --color-base-light: white, 
+  --color-base-ligher: #666;
+  --color-base-light: white;
 }
 
 .main-cont {
@@ -46,6 +47,36 @@
 .interface {
   background-color: transparent;
   color: var(--color-base-light)
+}
+
+.form {
+  background-color: var(--color-base-ligher);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+  margin: 1.5rem;
+  gap: 0.5rem;
+
+  animation-name: fadeIn;
+  animation-duration: .5s;
+}
+
+.form > input, select {
+  padding: .5rem;
+  border-radius: 7px;
+  border: transparent;
+}
+
+.logo {
+  margin-top: 1rem;
+}
+
+.workouts {
+  color: var(--color-base-light);
+  background-color: transparent;
+  padding: 1rem;
+  border-top: 1px solid var(--color-base-light);
 }
 
 .map-cont {
@@ -83,4 +114,18 @@
   background-color: var(--color-base-dark) !important;
   color: var(--color-base-light);
   transform: scale(1.2);
+}
+
+.hidden {
+  display: none;
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

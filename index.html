@@ -12,7 +12,27 @@
 <body>
 
   <div class="main-cont">
-    <div class="interface">interface</div>
+    <div class="interface">
+
+      <!-- <img src="" alt="logo" class="logo"> -->
+
+      <form class="form hidden">
+        <select name="workout-type" class="workout-type">
+          <!-- <option value="" selected disabled>workout type</option> -->
+          <option value="running" class="running">running</option>
+          <option value="cycling" class="cycling">cycling</option>
+        </select>
+
+        <input type="number" class="distance" placeholder="distance">
+        <input type="number" class="duration" placeholder="duration">
+        <input type="number" class="elevation hidden" placeholder="elevation">
+        <input type="number" class="cadence" placeholder="cadence">
+
+        <button type="submit" hidden>Add Workout</button>
+      </form>
+
+      <div class="workouts">this is a list of workouts from the local storage</div>
+    </div>
     <div class="map-cont" id="map">map</div>
   </div>
   
